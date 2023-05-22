@@ -1,0 +1,12 @@
+-   id: black-check
+    name: Check Black formatting on idp_user
+    description: This hook checks Black formatting on the idp_user directory.
+    entry: black idp_user --check
+    language: python
+    types: [python]
+-   id: ruff-check
+    name: Check Ruff formatting on idp_user
+    description: This hook checks Ruff formatting on the idp_user directory.
+    entry: ruff idp_user
+    language: python
+    types: [python]
