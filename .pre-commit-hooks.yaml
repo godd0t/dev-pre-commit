@@ -1,12 +1,23 @@
--   id: black-check
-    name: Check Black formatting on idp_user
-    description: This hook checks Black formatting on the idp_user directory.
-    entry: black idp_user --check
-    language: python
-    types: [python]
--   id: ruff-check
-    name: Check Ruff formatting on idp_user
-    description: This hook checks Ruff formatting on the idp_user directory.
-    entry: ruff idp_user
-    language: python
-    types: [python]
+-   id: make-lint
+    name: Run linters on the project.
+    description: This hook runs linters on the project.
+    entry: make lint
+    language: system
+
+-   id: make-format
+    name: Run formatters on the project.
+    description: This hook runs formatters on the project.
+    entry: make format
+    language: system
+
+-   id: make-test
+    name: Run tests on the project.
+    description: This hook runs tests on the project.
+    entry: make test
+    language: system
+
+-   id: update-version
+    name: Update the version of the project.
+    description: This hook updates the version of the project.
+    entry: make update-version
+    language: system
